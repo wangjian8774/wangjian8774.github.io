@@ -176,11 +176,11 @@
 <p>来自<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.videocard.0">(Bilibili)手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a></p>
 </blockquote>
 <hr>
-<p>#1.部署环境<br>①安装nodejs<br><code>sudo apt-get install nodejs</code></p>
+<p>##1.部署环境<br>①安装nodejs<br><code>sudo apt-get install nodejs</code></p>
 <p>②安装npm<br><code>sudo apt-get install npm</code></p>
 <p>③安装cnpm<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p>
 <p>④正式安装hexo<br><code>cnpm install -g hexo-cli</code></p>
-<p>#2.初始化个人博客<br>①在/home/jian创建blog目录<br><code>mkdir blog</code></p>
+<p>##2.初始化个人博客<br>①在/home/jian创建blog目录<br><code>mkdir blog</code></p>
 <p>②初始化博客<br> <code>sudo hexo init</code><br>//<strong>问题：</strong>此处一直出现throw new TypeError(‘Console expects a writable stream instance’);错误，是因为node的版本过低，要在10.0以上，更新方法如下：<br>a.先安装n模块<br><code>sudo npm install -g n</code><br>b.更新 node<br><code>sudo n latest</code></p>
 <p>③启动博客<br><code>hexo s</code></p>
 <p>#3.如何写博客<br>①创建博客<br><code>hexo n &quot;我的第一篇博客文章&quot;</code><br>②修改文章内容<br><code>vim 我的第一篇博客文章      //到相应目录下</code><br>③清理、生成</p>
