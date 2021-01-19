@@ -5,10 +5,10 @@
     
     <entry>
       <title>blog configuration issues</title>
-      <link href="2021/01/19/busuanzi-problem/"/>
-      <url>2021/01/19/busuanzi-problem/</url>
+      <link href="2021/01/19/blog-configuration-issues/"/>
+      <url>2021/01/19/blog-configuration-issues/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-busuanzi-problem"><a href="#1-busuanzi-problem" class="headerlink" title="1.busuanzi problem"></a>1.busuanzi problem</h2><p>   <strong>问题</strong> 一直再找<a href="http://localhost:4000/">http://localhost:4000/</a> 时不蒜子统计数字不正确，改来改去就不知道问题在哪<br>   <strong>原因</strong>原来出在本地访问的问题，推到线上就正常了，被这东西搞了好几个小时，终于找到问题所在</p><blockquote><p>参考<a href="https://removeif.github.io/theme/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html">不蒜子统计常见问题</a></p></blockquote><h2 id="2-在配置文件中，每一个元素的冒号后面都要加一个空格"><a href="#2-在配置文件中，每一个元素的冒号后面都要加一个空格" class="headerlink" title="2.在配置文件中，每一个元素的冒号后面都要加一个空格"></a>2.在配置文件中，每一个元素的冒号后面都要加一个空格</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-busuanzi-problem"><a href="#1-busuanzi-problem" class="headerlink" title="1.busuanzi problem"></a>1.busuanzi problem</h2><p><strong>问题：</strong>一直再找<a href="http://localhost:4000/">http://localhost:4000/</a> 时不蒜子统计数字不正确，改来改去就不知道问题在哪<br><strong>原因：</strong>原来出在本地访问的问题，推到线上就正常了，被这东西搞了好几个小时，终于找到问题所在</p><blockquote><p>参考：*  <a href="https://removeif.github.io/theme/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html">不蒜子统计常见问题</a></p></blockquote><h2 id="2-在配置文件中，每一个元素的冒号后面都要加一个空格"><a href="#2-在配置文件中，每一个元素的冒号后面都要加一个空格" class="headerlink" title="2.在配置文件中，每一个元素的冒号后面都要加一个空格"></a>2.在配置文件中，每一个元素的冒号后面都要加一个空格</h2><h2 id="3-配置个性化博客"><a href="#3-配置个性化博客" class="headerlink" title="3.配置个性化博客"></a>3.配置个性化博客</h2><blockquote><p>参考：* <a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-21">超详细Hexo+Github博客搭建小白教程</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a> </p></blockquote>]]></content>
       
       
       <categories>
