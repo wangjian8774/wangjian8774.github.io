@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WangJian&#39;s Blog</title>
+  
+  
+  <link href="https://github.com/wangjian8774/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/wangjian8774/"/>
+  <updated>2021-01-19T07:53:00.743Z</updated>
+  <id>https://github.com/wangjian8774/</id>
+  
+  <author>
+    <name>WangJian</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EmojiTest</title>
+    <link href="https://github.com/wangjian8774/2021/01/19/EmojiTest/"/>
+    <id>https://github.com/wangjian8774/2021/01/19/EmojiTest/</id>
+    <published>2021-01-19T07:52:02.000Z</published>
+    <updated>2021-01-19T07:53:00.743Z</updated>
+    
+    <content type="html"><![CDATA[<p><span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8&quot; aria-hidden=</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="https://github.com/wangjian8774/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://github.com/wangjian8774/2021/01/19/hello-world/"/>
+    <id>https://github.com/wangjian8774/2021/01/19/hello-world/</id>
+    <published>2021-01-19T04:41:15.946Z</published>
+    <updated>2021-01-09T12:49:03.898Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇博客文章</title>
+    <link href="https://github.com/wangjian8774/2021/01/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>https://github.com/wangjian8774/2021/01/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
+    <published>2021-01-09T13:44:44.000Z</published>
+    <updated>2021-01-19T05:55:57.961Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>来自<a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.videocard.0">(Bilibili)手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a></p></blockquote><hr><h2 id="1-部署环境"><a href="#1-部署环境" class="headerlink" title="1.部署环境"></a>1.部署环境</h2><p>①安装nodejs<br><code>sudo apt-get install nodejs</code></p><p>②安装npm<br><code>sudo apt-get install npm</code></p><p>③安装cnpm<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p><p>④正式安装hexo<br><code>cnpm install -g hexo-cli</code></p><h2 id="2-初始化个人博客"><a href="#2-初始化个人博客" class="headerlink" title="2.初始化个人博客"></a>2.初始化个人博客</h2><p>①在/home/jian创建blog目录<br><code>mkdir blog</code></p><p>②初始化博客<br> <code>sudo hexo init</code><br>//<strong>问题：</strong>此处一直出现throw new TypeError(‘Console expects a writable stream instance’);错误，是因为node的版本过低，要在10.0以上，更新方法如下：<br>a.先安装n模块<br><code>sudo npm install -g n</code><br>b.更新 node<br><code>sudo n latest</code></p><p>③启动博客<br><code>hexo s</code></p><h2 id="3-如何写博客"><a href="#3-如何写博客" class="headerlink" title="3.如何写博客"></a>3.如何写博客</h2><p>①创建博客<br><code>hexo n "我的第一篇博客文章"</code><br>②修改文章内容<br><code>vim 我的第一篇博客文章      //到相应目录下</code><br>③清理、生成</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//先返回/blog目录</span><br><span class="line">hexo clean  //清理</span><br><span class="line">hexo g //生成</span><br><span class="line">hexo s//重新启动</span><br></pre></td></tr></tbody></table></figure><p><strong>问题：</strong>FATAL Port 4000 has been used. Try other port instead.</p><p><strong>解决方法：</strong>关掉终端，重新打开（原因：上次关闭hexo s 是用ctrl z，实际这个线程没关掉，4000端口被占用，下次关闭用ctrl c）</p><h2 id="4-如何把个人博客部署到远端"><a href="#4-如何把个人博客部署到远端" class="headerlink" title="4.如何把个人博客部署到远端"></a>4.如何把个人博客部署到远端</h2><p>①在github上创建新仓库</p><p>② 在blog目录下安装git部署插件<br><code>cnpm install --save hexo-deployer-git</code></p><p>③配置_config.yml </p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line"> repo: https://github.com/YourGithubName/YourGithubName.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">-----</span><br></pre></td></tr></tbody></table></figure><p>④部署到Github仓库里<br><code>hexo d</code></p><p>⑤访问这个地址可以查看博客<br><code>https://YourGithubName.github.io/  </code></p><h2 id="5-如何给个人博客换主题"><a href="#5-如何给个人博客换主题" class="headerlink" title="5.如何给个人博客换主题"></a>5.如何给个人博客换主题</h2><p>① 下载yilia主题到本地<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></p><p>②#修改hexo根目录下的 _config.yml 文件<br> <code>theme: yilia</code></p><p>③重新部署到github</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo c//清理一下</span><br><span class="line">hexo g//生成</span><br><span class="line">        //hexo s //在本地可以预览</span><br><span class="line">hexo d//部署到远程Github仓库</span><br><span class="line">https://YourGithubName.github.io/  //查看博客</span><br></pre></td></tr></tbody></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;来自&lt;a href=&quot;https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.videocard.0&quot;&gt;(Bilibili)手把手教你从0开始搭建自己的个人博客 |无坑版视频</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
