@@ -6,7 +6,7 @@
   <link href="https://github.com/wangjian8774/atom.xml" rel="self"/>
   
   <link href="https://github.com/wangjian8774/"/>
-  <updated>2021-01-09T12:49:03.898Z</updated>
+  <updated>2021-01-19T12:41:42.487Z</updated>
   <id>https://github.com/wangjian8774/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog configuration issues</title>
+    <link href="https://github.com/wangjian8774/2021/01/19/busuanzi-problem/"/>
+    <id>https://github.com/wangjian8774/2021/01/19/busuanzi-problem/</id>
+    <published>2021-01-19T12:31:27.000Z</published>
+    <updated>2021-01-19T12:41:42.487Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-busuanzi-problem&quot;&gt;&lt;a href=&quot;#1-busuanzi-problem&quot; class=&quot;headerlink&quot; title=&quot;1.busuanzi problem&quot;&gt;&lt;/a&gt;1.busuanzi problem&lt;/h2&gt;&lt;p&gt;  </summary>
+        
+      
+    
+    
+    
+    <category term="踩坑" scheme="https://github.com/wangjian8774/categories/%E8%B8%A9%E5%9D%91/"/>
+    
+    
+    <category term="博客" scheme="https://github.com/wangjian8774/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
