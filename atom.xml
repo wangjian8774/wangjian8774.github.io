@@ -6,7 +6,7 @@
   <link href="https://github.com/wangjian8774/atom.xml" rel="self"/>
   
   <link href="https://github.com/wangjian8774/"/>
-  <updated>2021-01-19T15:15:09.506Z</updated>
+  <updated>2021-01-20T03:45:02.630Z</updated>
   <id>https://github.com/wangjian8774/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>blog configuration issues</title>
-    <link href="https://github.com/wangjian8774/2021/01/19/blog-configuration-issues/"/>
-    <id>https://github.com/wangjian8774/2021/01/19/blog-configuration-issues/</id>
-    <published>2021-01-19T15:00:01.000Z</published>
-    <updated>2021-01-19T15:15:09.506Z</updated>
+    <title>ubuntu1804网络图标不见</title>
+    <link href="https://github.com/wangjian8774/2021/01/20/ubuntu1804-wang-luo-tu-biao-bu-jian/"/>
+    <id>https://github.com/wangjian8774/2021/01/20/ubuntu1804-wang-luo-tu-biao-bu-jian/</id>
+    <published>2021-01-20T03:37:45.000Z</published>
+    <updated>2021-01-20T03:45:02.630Z</updated>
     
     
       
@@ -34,10 +34,35 @@
     
     
     
-    <category term="踩坑" scheme="https://github.com/wangjian8774/categories/%E8%B8%A9%E5%9D%91/"/>
+    <category term="ubuntu" scheme="https://github.com/wangjian8774/categories/ubuntu/"/>
     
     
-    <category term="博客" scheme="https://github.com/wangjian8774/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="ubuntu系统问题" scheme="https://github.com/wangjian8774/tags/ubuntu%E7%B3%BB%E7%BB%9F%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog configuration issues</title>
+    <link href="https://github.com/wangjian8774/2021/01/19/blog-configuration-issues/"/>
+    <id>https://github.com/wangjian8774/2021/01/19/blog-configuration-issues/</id>
+    <published>2021-01-19T15:00:01.000Z</published>
+    <updated>2021-01-20T03:50:01.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="https://github.com/wangjian8774/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="踩坑" scheme="https://github.com/wangjian8774/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
