@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>我的帅照</title>
-      <link href="2021/01/20/wo-de-shuai-zhao/"/>
-      <url>2021/01/20/wo-de-shuai-zhao/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/.com//%E6%88%91%E7%9A%84%E5%B8%85%E7%85%A7.jpg" alt="alt"></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ubuntu1804网络图标不见</title>
       <link href="2021/01/20/ubuntu1804-wang-luo-tu-biao-bu-jian/"/>
       <url>2021/01/20/ubuntu1804-wang-luo-tu-biao-bu-jian/</url>
@@ -46,7 +33,7 @@
       <link href="2021/01/19/blog-configuration-issues/"/>
       <url>2021/01/19/blog-configuration-issues/</url>
       
-        <content type="html"><![CDATA[<h2 id="1-busuanzi-problem"><a href="#1-busuanzi-problem" class="headerlink" title="1.busuanzi problem"></a>1.busuanzi problem</h2><p><strong>问题：</strong> 一直再找<a href="http://localhost:4000/">http://localhost:4000/</a> 时不蒜子统计数字不正确，改来改去就不知道问题在哪<br><strong>原因：</strong> 原来出在本地访问的问题，推到线上就正常了，被这东西搞了好几个小时，终于找到问题所在</p><blockquote><p>参考：</p><ul><li><a href="https://removeif.github.io/theme/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html">不蒜子统计常见问题</a></li></ul></blockquote><h2 id="2-在配置文件中，每一个元素的冒号后面都要加一个空格"><a href="#2-在配置文件中，每一个元素的冒号后面都要加一个空格" class="headerlink" title="2.在配置文件中，每一个元素的冒号后面都要加一个空格"></a>2.在配置文件中，每一个元素的冒号后面都要加一个空格</h2><h2 id="3-配置个性化博客"><a href="#3-配置个性化博客" class="headerlink" title="3.配置个性化博客"></a>3.配置个性化博客</h2><blockquote><p>参考：</p><ul><li><a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-21">超详细Hexo+Github博客搭建小白教程</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a> </li></ul></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-busuanzi-problem"><a href="#1-busuanzi-problem" class="headerlink" title="1.busuanzi problem"></a>1.busuanzi problem</h2><p><strong>问题：</strong> 一直再找<a href="http://localhost:4000/">http://localhost:4000/</a> 时不蒜子统计数字不正确，改来改去就不知道问题在哪<br><strong>原因：</strong> 原来出在本地访问的问题，推到线上就正常了，被这东西搞了好几个小时，终于找到问题所在</p><blockquote><p>参考：</p><ul><li><a href="https://removeif.github.io/theme/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html">不蒜子统计常见问题</a></li></ul></blockquote><h2 id="2-在配置文件中，每一个元素的冒号后面都要加一个空格"><a href="#2-在配置文件中，每一个元素的冒号后面都要加一个空格" class="headerlink" title="2.在配置文件中，每一个元素的冒号后面都要加一个空格"></a>2.在配置文件中，每一个元素的冒号后面都要加一个空格</h2><h2 id="3-配置个性化博客"><a href="#3-配置个性化博客" class="headerlink" title="3.配置个性化博客"></a>3.配置个性化博客</h2><blockquote><p>参考：</p><ul><li><a href="https://godweiyang.com/2018/04/13/hexo-blog/#toc-heading-21">超详细Hexo+Github博客搭建小白教程</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a> </li></ul></blockquote><h2 id="4-在博客中插入图片"><a href="#4-在博客中插入图片" class="headerlink" title="4.在博客中插入图片"></a>4.在博客中插入图片</h2><blockquote><p>参考：</p><ul><li><a href="https://blog.csdn.net/qq_41907806/article/details/109064385">hexo博客中如何插入图片</a></li></ul></blockquote><h2 id="5-博客运行出错时，看清到底是那个文件出错，文件内找不出来的话，用vsCode进行两文件对比（重要）"><a href="#5-博客运行出错时，看清到底是那个文件出错，文件内找不出来的话，用vsCode进行两文件对比（重要）" class="headerlink" title="5.博客运行出错时，看清到底是那个文件出错，文件内找不出来的话，用vsCode进行两文件对比（重要）"></a>5.博客运行出错时，看清到底是那个文件出错，文件内找不出来的话，用vsCode进行两文件对比<strong>（重要）</strong></h2>]]></content>
       
       
       <categories>
