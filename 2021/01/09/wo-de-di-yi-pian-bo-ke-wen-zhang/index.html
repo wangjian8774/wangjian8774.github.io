@@ -453,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-20
+                    2021-01-22
                 </div>
                 
 
@@ -504,7 +504,7 @@
 <p>③安装cnpm<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p>
 <p>④正式安装hexo<br><code>cnpm install -g hexo-cli</code></p>
 <h2 id="2-初始化个人博客"><a href="#2-初始化个人博客" class="headerlink" title="2.初始化个人博客"></a>2.初始化个人博客</h2><p>①在/home/jian创建blog目录<br><code>mkdir blog</code></p>
-<p>②初始化博客<br> <code>sudo hexo init</code><br>//<strong>问题：</strong>此处一直出现throw new TypeError(‘Console expects a writable stream instance’);错误，是因为node的版本过低，要在10.0以上，更新方法如下：<br>a.先安装n模块<br><code>sudo npm install -g n</code><br>b.更新 node<br><code>sudo n latest</code></p>
+<p>②初始化博客<br> <code>sudo hexo init</code><br>//<strong>问题：</strong>此处一直出现throw new TypeError(‘Console expects a writable stream instance’);<br>错误：是因为node的版本过低，要在10.0以上，更新方法如下：<br>a.先安装n模块<br><code>sudo npm install -g n</code><br>b.更新 node<br><code>sudo n latest</code></p>
 <p>③启动博客<br><code>hexo s</code></p>
 <h2 id="3-如何写博客"><a href="#3-如何写博客" class="headerlink" title="3.如何写博客"></a>3.如何写博客</h2><p>①创建博客<br><code>hexo n "我的第一篇博客文章"</code><br>②修改文章内容<br><code>vim 我的第一篇博客文章      //到相应目录下</code><br>③清理、生成</p>
 <pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">//先返回/blog目录
@@ -1106,7 +1106,6 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
             
             
             
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <span id="busuanzi_container_site_pv">
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
