@@ -6,7 +6,7 @@
   <link href="https://github.com/wangjian8774/atom.xml" rel="self"/>
   
   <link href="https://github.com/wangjian8774/"/>
-  <updated>2021-01-22T09:36:36.577Z</updated>
+  <updated>2021-02-13T00:00:18.273Z</updated>
   <id>https://github.com/wangjian8774/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装centOS7及配置</title>
+    <link href="https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/"/>
+    <id>https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/</id>
+    <published>2021-02-12T05:25:15.000Z</published>
+    <updated>2021-02-13T00:00:18.273Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="centOS7" scheme="https://github.com/wangjian8774/categories/centOS7/"/>
+    
+    
+    <category term="centOS7系统" scheme="https://github.com/wangjian8774/tags/centOS7%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>优化hexo博客</title>

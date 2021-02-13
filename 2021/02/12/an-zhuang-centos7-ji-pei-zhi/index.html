@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客文章, WangJian&#39;s Blog">
+    <meta name="keywords" content="安装centOS7及配置, WangJian&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客文章 | WangJian&#39;s Blog</title>
+    <title>安装centOS7及配置 | WangJian&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客文章</h1>
+                    <h1 class="description center-align post-title">安装centOS7及配置</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/centOS7%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">centOS7系统</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/centOS7/" class="post-category">
+                                centOS7
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -446,28 +459,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-09
+                    2021-02-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-22
+                    2021-02-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    454
+                    475
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -495,45 +508,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>来自<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.videocard.0">(Bilibili)手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a></p>
-</blockquote>
-<hr>
-<h2 id="1-部署环境"><a href="#1-部署环境" class="headerlink" title="1.部署环境"></a>1.部署环境</h2><p>①安装nodejs<br><code>sudo apt-get install nodejs</code></p>
-<p>②安装npm<br><code>sudo apt-get install npm</code></p>
-<p>③安装cnpm<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code></p>
-<p>④正式安装hexo<br><code>cnpm install -g hexo-cli</code></p>
-<h2 id="2-初始化个人博客"><a href="#2-初始化个人博客" class="headerlink" title="2.初始化个人博客"></a>2.初始化个人博客</h2><p>①在/home/jian创建blog目录<br><code>mkdir blog</code></p>
-<p>②初始化博客<br> <code>sudo hexo init</code><br>//<strong>问题：</strong>此处一直出现throw new TypeError(‘Console expects a writable stream instance’);<br>错误：是因为node的版本过低，要在10.0以上，更新方法如下：<br>a.先安装n模块<br><code>sudo npm install -g n</code><br>b.更新 node<br><code>sudo n latest</code></p>
-<p>③启动博客<br><code>hexo s</code></p>
-<h2 id="3-如何写博客"><a href="#3-如何写博客" class="headerlink" title="3.如何写博客"></a>3.如何写博客</h2><p>①创建博客<br><code>hexo n "我的第一篇博客文章"</code><br>②修改文章内容<br><code>vim 我的第一篇博客文章      //到相应目录下</code><br>③清理、生成</p>
-<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">//先返回/blog目录
-hexo clean  //清理
-hexo g //生成
-hexo s//重新启动<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>问题：</strong>FATAL Port 4000 has been used. Try other port instead.</p>
-<p><strong>解决方法：</strong>关掉终端，重新打开（原因：上次关闭hexo s 是用ctrl z，实际这个线程没关掉，4000端口被占用，下次关闭用ctrl c）</p>
-<h2 id="4-如何把个人博客部署到远端"><a href="#4-如何把个人博客部署到远端" class="headerlink" title="4.如何把个人博客部署到远端"></a>4.如何把个人博客部署到远端</h2><p>①在github上创建新仓库</p>
-<p>② 在blog目录下安装git部署插件<br><code>cnpm install --save hexo-deployer-git</code></p>
-<p>③配置_config.yml </p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">-----
-	# Deployment
-	## Docs: https://hexo.io/docs/deployment.html
-	deploy:
-  		type: git
- 		repo: https://github.com/YourGithubName/YourGithubName.github.io.git
-  		branch: master
------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>④部署到Github仓库里<br><code>hexo d</code></p>
-<p>⑤访问这个地址可以查看博客<br><code>https://YourGithubName.github.io/  </code></p>
-<h2 id="5-如何给个人博客换主题"><a href="#5-如何给个人博客换主题" class="headerlink" title="5.如何给个人博客换主题"></a>5.如何给个人博客换主题</h2><p>① 下载yilia主题到本地<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></p>
-<p>②#修改hexo根目录下的 _config.yml 文件<br> <code>theme: yilia</code></p>
-<p>③重新部署到github</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo c	//清理一下
-hexo g	//生成
-        //hexo s //在本地可以预览
-hexo d	//部署到远程Github仓库
-https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="1-安装centOS7系统"><a href="#1-安装centOS7系统" class="headerlink" title="1.安装centOS7系统"></a>1.安装centOS7系统</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装的时候就正常安装，下载镜像源，按照步骤正常安装。此处我是选择最小安装，并且勾选了虽小安装的所有选项。</p>
+<h2 id="2-配置centOS7系统"><a href="#2-配置centOS7系统" class="headerlink" title="2.配置centOS7系统"></a>2.配置centOS7系统</h2><pre><code>①基础软件的安装
+1）yum -y install net-tools
+2）yum -y install vim
+3）yum -y install wget</code></pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>问题：</strong> 无法使用ifconfig命令</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>解决方法：</strong> 使用<br><code>yum -y install net-tools</code><br>命令来安装。此时又发现<strong>问题：</strong> yum命令不可用，<strong>解决方法：</strong> </p>
+<pre class="line-numbers language-vi" data-language="vi"><div class="caption"><span>/etc/sysconfig/network-scripts/ifcfg-ens33```(此时的vim还没有安装，不可使用)，修改"ONBOOT"的值为"yes"，保存并退出。重启系统：```reboot```。</span></div><code class="language-vi">
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;至此可以使用yum命令来安装相关软件
+
+&gt;参考:
+&gt;
+&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.CentOS7的安装及配置](https://blog.csdn.net/qq_34256296/article/details/81322243)
+&gt;
+&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.解决centos-yum无法正常使用问题](https://www.cnblogs.com/duanlinxiao/p/11002741.html)
+
+    ②配置静态IP（防止每次连接时ip地址动态变化）
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;用ifconfig查看IP地址，看是否有ip地址，如果有则跳过a。
+
+a.分配IP地址：使用 ```dhclient``` (为虚拟机网络自动分配一个网络内可用的IP地址)，然后将此ip地址固定下来。
+
+b.修改配置文件：```vim /etc/sysconfig/network-scripts/ifcfg-ens33``` :
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;修改以下：
+将"BOOTPROTO"的值由"dhcp"修改为"static";
+将"ONBOOT"的值由"no"改为"yes"。
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;添加以下：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>IPADDR=192.168.1.102<br>NETMASK=255.255.255.0<br>GATEWAY=192.168.1.1<br>DNS1=119.29.29.29</p>
+<pre><code>
+保存并退出。重启网络：```systemctl restart network.service```
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
 
                 
             </div>
@@ -550,7 +568,7 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">WangJian</a>
+                    <a href="/about" rel="external nofollow noreferrer">王建</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -560,7 +578,7 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/wangjian8774/2021/01/09/wo-de-di-yi-pian-bo-ke-wen-zhang/">https://github.com/wangjian8774/2021/01/09/wo-de-di-yi-pian-bo-ke-wen-zhang/</a>
+                    <a href="https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/">https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,7 +591,7 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">WangJian</a>
+                    <a href="/about" target="_blank">王建</a>
                     !
                 </span>
             </div>
@@ -597,7 +615,11 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/centOS7%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">centOS7系统</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -766,7 +788,7 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
         repo: 'wangjian8774.github.io',
         owner: 'wangjian8774',
         admin: "wangjian8774",
-        id: '2021-01-09T21-44-44',
+        id: '2021-02-12T13-25-15',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -794,54 +816,18 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/19/hello-world/">
+                <a href="/2021/02/12/an-zhuang-centos7-ji-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="安装centOS7及配置">
                         
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-19
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            WangJian
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/01/09/wo-de-di-yi-pian-bo-ke-wen-zhang/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="我的第一篇博客文章">
-                        
-                        <span class="card-title">我的第一篇博客文章</span>
+                        <span class="card-title">安装centOS7及配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -852,17 +838,78 @@ https://YourGithubName.github.io/  //查看博客<span aria-hidden="true" class=
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            WangJian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/centOS7/" class="post-category">
+                                    centOS7
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/centOS7%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">centOS7系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/01/21/you-hua-hexo-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="优化hexo博客">
+                        
+                        <span class="card-title">优化hexo博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">博客优化</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

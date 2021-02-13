@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>安装centOS7及配置</title>
+      <link href="2021/02/12/an-zhuang-centos7-ji-pei-zhi/"/>
+      <url>2021/02/12/an-zhuang-centos7-ji-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-安装centOS7系统"><a href="#1-安装centOS7系统" class="headerlink" title="1.安装centOS7系统"></a>1.安装centOS7系统</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装的时候就正常安装，下载镜像源，按照步骤正常安装。此处我是选择最小安装，并且勾选了虽小安装的所有选项。</p><h2 id="2-配置centOS7系统"><a href="#2-配置centOS7系统" class="headerlink" title="2.配置centOS7系统"></a>2.配置centOS7系统</h2><pre><code>①基础软件的安装1）yum -y install net-tools2）yum -y install vim3）yum -y install wget</code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>问题：</strong> 无法使用ifconfig命令</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>解决方法：</strong> 使用<br><code>yum -y install net-tools</code><br>命令来安装。此时又发现<strong>问题：</strong> yum命令不可用，<strong>解决方法：</strong> </p><pre class="line-numbers language-vi" data-language="vi"><div class="caption"><span>/etc/sysconfig/network-scripts/ifcfg-ens33```(此时的vim还没有安装，不可使用)，修改"ONBOOT"的值为"yes"，保存并退出。重启系统：```reboot```。</span></div><code class="language-vi">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;至此可以使用yum命令来安装相关软件&gt;参考:&gt;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.CentOS7的安装及配置](https://blog.csdn.net/qq_34256296/article/details/81322243)&gt;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.解决centos-yum无法正常使用问题](https://www.cnblogs.com/duanlinxiao/p/11002741.html)    ②配置静态IP（防止每次连接时ip地址动态变化）&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;用ifconfig查看IP地址，看是否有ip地址，如果有则跳过a。a.分配IP地址：使用 ```dhclient``` (为虚拟机网络自动分配一个网络内可用的IP地址)，然后将此ip地址固定下来。b.修改配置文件：```vim /etc/sysconfig/network-scripts/ifcfg-ens33``` :&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;修改以下：将"BOOTPROTO"的值由"dhcp"修改为"static";将"ONBOOT"的值由"no"改为"yes"。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;添加以下：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>IPADDR=192.168.1.102<br>NETMASK=255.255.255.0<br>GATEWAY=192.168.1.1<br>DNS1=119.29.29.29</p><pre><code>保存并退出。重启网络：```systemctl restart network.service```</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> centOS7 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centOS7系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>优化hexo博客</title>
       <link href="2021/01/21/you-hua-hexo-bo-ke/"/>
       <url>2021/01/21/you-hua-hexo-bo-ke/</url>
