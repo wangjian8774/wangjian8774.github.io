@@ -6,7 +6,7 @@
   <link href="https://github.com/wangjian8774/atom.xml" rel="self"/>
   
   <link href="https://github.com/wangjian8774/"/>
-  <updated>2021-02-13T00:00:18.273Z</updated>
+  <updated>2021-02-14T01:55:54.611Z</updated>
   <id>https://github.com/wangjian8774/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ubuntu_server2004配置</title>
+    <link href="https://github.com/wangjian8774/2021/02/14/ubuntu-server2004-pei-zhi/"/>
+    <id>https://github.com/wangjian8774/2021/02/14/ubuntu-server2004-pei-zhi/</id>
+    <published>2021-02-14T01:47:48.000Z</published>
+    <updated>2021-02-14T01:55:54.611Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="ubuntu" scheme="https://github.com/wangjian8774/categories/ubuntu/"/>
+    
+    
+    <category term="ubuntu系统" scheme="https://github.com/wangjian8774/tags/ubuntu%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>安装centOS7及配置</title>
     <link href="https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/"/>
     <id>https://github.com/wangjian8774/2021/02/12/an-zhuang-centos7-ji-pei-zhi/</id>
     <published>2021-02-12T05:25:15.000Z</published>
-    <updated>2021-02-13T00:00:18.273Z</updated>
+    <updated>2021-02-14T01:45:49.847Z</updated>
     
     
       

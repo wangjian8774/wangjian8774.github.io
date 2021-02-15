@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, WangJian&#39;s Blog">
+    <meta name="keywords" content="ubuntu_server2004配置, WangJian&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | WangJian&#39;s Blog</title>
+    <title>ubuntu_server2004配置 | WangJian&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">ubuntu_server2004配置</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ubuntu%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">ubuntu系统</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ubuntu/" class="post-category">
+                                ubuntu
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -446,28 +459,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-19
+                    2021-02-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-09
+                    2021-02-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    447
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -495,15 +508,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <blockquote>
+<ul>
+<li>这篇文章思路有点乱，酌情观看（<strong>此文主要是配置ubuntu server2004，目的：部署hexo博客</strong>）</li>
+</ul>
+</blockquote>
+<h2 id="1-更改镜像源"><a href="#1-更改镜像源" class="headerlink" title="1.更改镜像源"></a>1.更改镜像源</h2><p>a.修改sources.list文件</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo vim /etc/apt/sources.list</code></p>
+<p>b.更新</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo apt-get update</code></p>
+<blockquote>
+<p>参考：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://www.cnblogs.com/finnhan/p/13709318.html">Ubuntu Server常用配置</a></p>
+</blockquote>
+<h2 id="2-连接ssh"><a href="#2-连接ssh" class="headerlink" title="2.连接ssh"></a>2.连接ssh</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>问题：</strong> packge “openssh-server” has no installation candidate:</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u><strong><em>主要原因：</em></strong> </u>出现这一系列问题是因为/etc/apt/sources.list文件已经被我删空了，<strong>恼死我</strong> 。</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ssh连接不上，由于没有安装openssh-server.安装openssh-server不存在包，需要更新一下源<code>sudo apt-get update </code>,然后再安装openssh-server（<code>sudo apt-get install openssh-server</code>）此时则可成功安装，通过<code>ps -ef|grep ssh</code>查看ssh进程，如果看到了sshd那么成功。然后通过xshell就可以连接了。</p>
+<ul>
+<li>安装完成后手动开启服务：</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo /etc/init.d/ssh start</code></p>
+<blockquote>
+<p>参考：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129092645">‘openssh-server’ has no installation candidate</a></p>
+</blockquote>
+<h2 id="3-虚拟机网络设置"><a href="#3-虚拟机网络设置" class="headerlink" title="3.虚拟机网络设置"></a>3.虚拟机网络设置</h2><ul>
+<li>连接网络时，使用桥接模式，然后ip地址就在同一个网段下了。（未设置之前是192.168.238.XXX）</li>
+</ul>
+<h2 id="4-ubuntu2004安装hexo博客"><a href="#4-ubuntu2004安装hexo博客" class="headerlink" title="4.ubuntu2004安装hexo博客"></a>4.ubuntu2004安装hexo博客</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先安装nodejs，可以安装，然后安装npm时，出现问题。<br><code>安装npm 报错npm : Depends: node-gyp (&gt;= 0.10.9) but it is not going to be installed</code>,参考2。此时安装弄好了npm 和 node,nodejs安装好一直查看不到版本号。 </p>
+<blockquote>
+<p>参考：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://wangjian8774.github.io/2021/01/09/wo-de-di-yi-pian-bo-ke-wen-zhang/">1.我的第一篇博客文章</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42396621/article/details/95471084">2.Ubuntu 18.04安装npm 报错npm : Depends: node-gyp (&gt;= 0.10.9) but it is not going to be installed</a></p>
+</blockquote>
 
                 
             </div>
@@ -520,7 +557,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">WangJian</a>
+                    <a href="/about" rel="external nofollow noreferrer">王建</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -530,7 +567,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/wangjian8774/2021/01/19/hello-world/">https://github.com/wangjian8774/2021/01/19/hello-world/</a>
+                    <a href="https://github.com/wangjian8774/2021/02/14/ubuntu-server2004-pei-zhi/">https://github.com/wangjian8774/2021/02/14/ubuntu-server2004-pei-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,7 +580,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">WangJian</a>
+                    <a href="/about" target="_blank">王建</a>
                     !
                 </span>
             </div>
@@ -567,7 +604,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ubuntu%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">ubuntu系统</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -736,7 +777,7 @@
         repo: 'wangjian8774.github.io',
         owner: 'wangjian8774',
         admin: "wangjian8774",
-        id: '2021-01-19T12-41-15',
+        id: '2021-02-14T09-47-48',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -764,17 +805,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/01/19/blog-configuration-issues/">
+                <a href="/2021/02/14/ubuntu-server2004-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="blog configuration issues">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="ubuntu_server2004配置">
                         
-                        <span class="card-title">blog configuration issues</span>
+                        <span class="card-title">ubuntu_server2004配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -784,26 +826,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/ubuntu/" class="post-category">
+                                    ubuntu
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%B8%A9%E5%9D%91/">
-                        <span class="chip bg-color">踩坑</span>
+                    <a href="/tags/ubuntu%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">ubuntu系统</span>
                     </a>
                     
                 </div>
@@ -817,13 +860,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/09/wo-de-di-yi-pian-bo-ke-wen-zhang/">
+                <a href="/2021/02/12/an-zhuang-centos7-ji-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="我的第一篇博客文章">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="安装centOS7及配置">
                         
-                        <span class="card-title">我的第一篇博客文章</span>
+                        <span class="card-title">安装centOS7及配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -834,15 +877,27 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            WangJian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/centOS7/" class="post-category">
+                                    centOS7
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/centOS7%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">centOS7系统</span>
+                    </a>
+                    
                 </div>
                 
             </div>
