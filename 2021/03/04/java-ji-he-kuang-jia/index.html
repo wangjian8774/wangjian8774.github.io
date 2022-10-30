@@ -1,0 +1,2063 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java集合框架, WangJian&#39;s Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java集合框架 | WangJian&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="WangJian's Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">WangJian&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">WangJian&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java集合框架</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
+                                <span class="chip bg-color">Java集合框架</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                Java学习
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-10-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    17 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java集合框架"><a href="#Java集合框架" class="headerlink" title="Java集合框架"></a>Java集合框架</h1><h2 id="1-集合的概念"><a href="#1-集合的概念" class="headerlink" title="1.集合的概念"></a>1.集合的概念</h2><h3 id="1-1什么是集合"><a href="#1-1什么是集合" class="headerlink" title="1.1什么是集合"></a>1.1什么是集合</h3><ul>
+<li><p>概念:对象的容器,定义了对多个对象进行操作的常用方法.可实现数组的功能.</p>
+</li>
+<li><p>和数组区别:</p>
+<ul>
+<li>(1)数组长度固定,集合长度不固定</li>
+<li>(2)数组可以存储基本类型和引用类型,集合只能存储引用类型</li>
+</ul>
+</li>
+<li><p>位置：java.util.*;</p>
+</li>
+</ul>
+<h2 id="2-Collection接口"><a href="#2-Collection接口" class="headerlink" title="2.Collection接口"></a>2.Collection接口</h2><h3 id="2-1Collection体系集合"><a href="#2-1Collection体系集合" class="headerlink" title="2.1Collection体系集合"></a>2.1Collection体系集合</h3><p><img src="/2021/03/04/java-ji-he-kuang-jia/1Collection%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88.jpg" alt="1Collection体系集合"></p>
+<ul>
+<li>Collection：该体系结构的根接口,代表一组对象,称为”集合”.</li>
+<li>List接口的特点: 有序、有下标、元素可重复</li>
+<li>Set接口的特点：无序、无下标、元素不能重复</li>
+</ul>
+<h3 id="2-2Collection父接口"><a href="#2-2Collection父接口" class="headerlink" title="2.2Collection父接口"></a>2.2Collection父接口</h3><ol>
+<li><p>特点：代表一组任意类型的对象,无序、无下标、不能重复（JDK API说一些有序，一些无序；一些可以重复，一些不可以重复）</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li>boolean add( Object obj) //添加一个对象.</li>
+<li>boolean addAll(Collection c) //将一个集合中的所有对象添加到此集合中.</li>
+<li>void clear() //清空此集合中的所有对象.</li>
+<li>boolean contains( Object o)   //检查此集合中是否包含o对象</li>
+<li>boolean equals( Object o) //比较此集合是否与指定对象相等.</li>
+<li>boolean isEmpty() //判断此集合是否为空</li>
+<li>boolean remove( Object o) //在此集合中移除o对象</li>
+<li>int size() //返回此集合中的元素个数.</li>
+<li>0bject[] toArray() //将此集合转换成数组.</li>
+<li>Iterator<e>  <strong>iterator()</strong> //返回在此 collection的元素上进行迭代的迭代器（返回的是一个<strong>接口</strong>）.</e></li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li><p>Collection接口的使用1（保存<strong>字符串</strong>）</p>
+<ol>
+<li><p>添加元素</p>
+</li>
+<li><p>删除元素</p>
+</li>
+<li><p>遍历元素【<strong>重点</strong>】</p>
+<ol>
+<li><p>增强for循环</p>
+</li>
+<li><p>使用迭代器（迭代器专门用来遍历集合的一种方式）</p>
+<ul>
+<li><p>hasNext();有没有下一个元素,</p>
+</li>
+<li><p>next();获取下一个元素</p>
+</li>
+<li><p>remove();删除当前元素</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Iterator iterator = collection.iterator();
+while (iterator.hasNext()){&nbsp;&nbsp;&nbsp; 
+    Object next = iterator.next();&nbsp;&nbsp;&nbsp;
+    System.out.println(next);&nbsp;&nbsp;&nbsp; //collection.remove(next); 
+            //不能删除的当前要使用的，会出现ConcurrentModificationException(并发修改异常)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          		//在迭代过程中不能用collection其他方法改变集合的元素的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+iterator.remove();//可以用迭代器（Iterator.remove()方法）中的方法来删除元素
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>判断</p>
+<ul>
+<li>判断包含元素</li>
+<li>判断是否为空</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="4">
+<li><p>Collection接口的使用2（保存<strong>对象</strong>）</p>
+<ol>
+<li>添加数据</li>
+<li>删除数据</li>
+<li>遍历数据<ol>
+<li>增强for</li>
+<li>迭代器Iterator</li>
+</ol>
+</li>
+<li>判断</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-List接口与实现"><a href="#3-List接口与实现" class="headerlink" title="3.List接口与实现"></a>3.List接口与实现</h2><h4 id="3-1List子接口"><a href="#3-1List子接口" class="headerlink" title="3.1List子接口"></a>3.1List子接口</h4><ol>
+<li><p>特点：有序、有下标、元素可以重复。</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li>void add（ int index, Object o）//在 index位置插入对象o。</li>
+<li>boolean addAll（ int index, Collection c）//将一个集合中的元素添加到此集合中的index位置。</li>
+<li>Object get（ int index）//返回集合中指定位置的元素。</li>
+<li>List subList（ int fromIndex, int toIndex）//返回 fromIndex和 toIndex之间的集合元素</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p>List子接口的使用1（添加<strong>字符串</strong>）</p>
+<ol>
+<li><p>添加数据</p>
+<ul>
+<li>按照元素<strong>内容</strong>添加</li>
+<li>按照<strong>下标</strong>添加</li>
+</ul>
+</li>
+<li><p>删除数据</p>
+<ul>
+<li>按照元素<strong>内容</strong>删除</li>
+<li>按照<strong>下标</strong>删除</li>
+</ul>
+</li>
+<li><p>遍历数据</p>
+<ol>
+<li>for循环</li>
+<li>增强for</li>
+<li>两种迭代器<br> 3.1 迭代器Iterator<br> 3.2 列表迭代器ListIterator    <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"=====3.1列表迭代器ListIterator从前往后====="</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ListIterator</span>  listIterator <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">listIterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>listIterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>listIterator<span class="token punctuation">.</span><span class="token function">nextIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span>listIterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"=====3.2列表迭代器ListIterator从前往后====="</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>listIterator<span class="token punctuation">.</span><span class="token function">hasPrevious</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>listIterator<span class="token punctuation">.</span><span class="token function">previousIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span>listIterator<span class="token punctuation">.</span><span class="token function">previous</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+</li>
+<li><p>判断 </p>
+</li>
+<li><p>获取位置</p>
+<ul>
+<li>通过下标获取</li>
+</ul>
+</li>
+</ol>
+<hr>
+</li>
+<li><p>List子接口的使用2（添加<strong>数字</strong>）</p>
+<ol>
+<li><p>添加数字数据</p>
+</li>
+<li><p>删除数字数据</p>
+<ol>
+<li><p>转为object类型</p>
+<p> <code>list.remove((Object) 20);</code></p>
+</li>
+<li><p>new Integer(20) ; 此处能够用这个方式，是因为整数缓冲的原</p>
+<p>  <code>list.remove(new Integer(20));</code></p>
+</li>
+</ol>
+</li>
+<li><p>补充subList(); 返回子集合，含头不含尾</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-2-List实现类"><a href="#3-2-List实现类" class="headerlink" title="3.2 List实现类"></a>3.2 List实现类</h3><h4 id="3-2-1-三种实现类"><a href="#3-2-1-三种实现类" class="headerlink" title="3.2.1 三种实现类"></a>3.2.1 三种实现类</h4><ol>
+<li><p>ArrayList【<strong>重点</strong>】：</p>
+<ul>
+<li><p><strong>数组</strong>结构实现，需要开辟<strong>连续空间</strong>，查询快、增删慢； </p>
+</li>
+<li><p>JDK1.2版本，运行效率快、线程不安全。</p>
+</li>
+</ul>
+</li>
+<li><p>Vector:</p>
+<ul>
+<li><strong>数组</strong>结构实现，査询快、增删慢； </li>
+<li>JDK1.0版本，运行效率慢、线程安全。</li>
+</ul>
+</li>
+<li><p>LinkedList:</p>
+<ul>
+<li><strong>链表</strong>（双向链表）结构实现，<strong>不</strong>需要开辟<strong>连续空间</strong>，增删快，查询慢。</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-2-2-ArrayList的使用"><a href="#3-2-2-ArrayList的使用" class="headerlink" title="3.2.2 ArrayList的使用"></a>3.2.2 ArrayList的使用</h4><ol>
+<li><p>添加元素</p>
+</li>
+<li><p>删除元素</p>
+<p><code>arrayList.remove(new Student("刘德华",20));//删不掉，原因在equals方法，需要重写</code></p>
+</li>
+<li><p>遍历元素【<strong>重点</strong>】</p>
+<ol>
+<li>for循环</li>
+<li>增强for循环</li>
+<li>两种迭代器<ol>
+<li>迭代器Iterator</li>
+<li>列表迭代器ListIterator（也有正序、逆序两种）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>判断</p>
+</li>
+<li><p>查找</p>
+</li>
+</ol>
+<h4 id="3-2-3ArrayList源码分析"><a href="#3-2-3ArrayList源码分析" class="headerlink" title="3.2.3ArrayList源码分析"></a>3.2.3ArrayList源码分析</h4><ul>
+<li><p>源码分析：</p>
+<ul>
+<li>DEFAULT_ CAPACITY=10；默认容量</li>
+<li>注意：如果没有向集合中添加任何元素时，容量0，添加一个元素之后容量10</li>
+<li>每次扩容大小是原来的1.5倍</li>
+<li>elementData  存放元素的<strong>数组</strong></li>
+<li>size   实际元素个数</li>
+<li>add（）添加元素</li>
+</ul>
+</li>
+<li><p>add()源码：</p>
+  <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+<span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span>size <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Increments modCount!!    </span>
+elementData<span class="token punctuation">[</span>size<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">;</span>    
+<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token function">calculateCapacity</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+modCount<span class="token operator">++</span><span class="token punctuation">;</span>    <span class="token comment">// overflow-conscious code   </span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">-</span> elementData<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>        
+    <span class="token function">grow</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">grow</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment">// overflow-conscious code    </span>
+     <span class="token keyword">int</span> oldCapacity <span class="token operator">=</span> elementData<span class="token punctuation">.</span>length<span class="token punctuation">;</span>   
+     <span class="token keyword">int</span> newCapacity <span class="token operator">=</span> oldCapacity <span class="token operator">+</span> <span class="token punctuation">(</span>oldCapacity <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> minCapacity <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>        
+          newCapacity <span class="token operator">=</span> minCapacity<span class="token punctuation">;</span>   
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> MAX_ARRAY_SIZE <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>       
+         newCapacity <span class="token operator">=</span> <span class="token function">hugeCapacity</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// minCapacity is usually close to size, so this is a win:    </span>
+       elementData <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> newCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-2-4-Vector的使用"><a href="#3-2-4-Vector的使用" class="headerlink" title="3.2.4 Vector的使用"></a>3.2.4 Vector的使用</h4></li>
+</ul>
+<ol>
+<li><p>添加元素</p>
+</li>
+<li><p>删除元素</p>
+</li>
+<li><p>遍历元素【<strong>重点</strong>】</p>
+<ol>
+<li><p>for循环、增强for、两种迭代器等都有</p>
+</li>
+<li><p>补充：使用枚举器</p>
+<p> Enumeration en = vercot.elements(); </p>
+</li>
+</ol>
+</li>
+<li><p>判断</p>
+</li>
+<li><p>补充<br> firstElement()、lastElement()、Element()</p>
+</li>
+</ol>
+<h4 id="3-2-5-LinkedList的使用-与前面的类似-："><a href="#3-2-5-LinkedList的使用-与前面的类似-：" class="headerlink" title="3.2.5 LinkedList的使用(与前面的类似)："></a>3.2.5 LinkedList的使用(与前面的<em>类似</em>)：</h4><ol>
+<li>添加元素</li>
+<li>删除元素</li>
+<li>遍历元素【<strong>重点</strong>】<ol>
+<li>for循环</li>
+<li>增强for</li>
+<li>两种迭代器<br> 3.1 迭代器Iterator<br> 3.2 列表迭代器ListIterator（也有正序、逆序两种）</li>
+</ol>
+</li>
+<li>判断</li>
+<li>查找</li>
+</ol>
+<h4 id="3-2-6-LinkedList源码分析"><a href="#3-2-6-LinkedList源码分析" class="headerlink" title="3.2.6 LinkedList源码分析"></a>3.2.6 LinkedList源码分析</h4><ul>
+<li><p>源码分析：</p>
+<ul>
+<li>int size:集合的大小</li>
+<li>Node first;链表的头节点</li>
+<li>Node last;链表的尾节点</li>
+</ul>
+</li>
+<li><p>add()源码：</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">//add()
+public boolean add(E e) {&nbsp;&nbsp;&nbsp; 
+    linkLast(e);&nbsp;&nbsp;&nbsp; 
+    return true;
+ }
+
+//尾部添加一个元素
+void linkLast(E e) {&nbsp;&nbsp;&nbsp; 
+    final Node&lt;E&gt; l = last;&nbsp;&nbsp;&nbsp;
+    final Node&lt;E&gt; newNode = new Node&lt;&gt;(l, e, null);&nbsp;&nbsp;&nbsp; 
+    last = newNode;&nbsp;&nbsp;&nbsp; 
+    if (l == null)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        first = newNode;&nbsp;&nbsp;&nbsp; 
+    else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        l.next = newNode;&nbsp;&nbsp;&nbsp; 
+    size++;&nbsp;&nbsp;&nbsp;
+    modCount++;}
+
+    //Node的源码
+    private static class Node&lt;E&gt; {&nbsp;&nbsp;&nbsp; 
+        E item;&nbsp;&nbsp;&nbsp; Node&lt;E&gt; next;&nbsp;&nbsp;&nbsp; 
+        Node&lt;E&gt; prev;&nbsp;&nbsp;&nbsp; 
+        Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        this.item = element;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        this.next = next;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        this.prev = prev;&nbsp;&nbsp;&nbsp; }
+        
+  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+</li>
+</ul>
+<h2 id="4-泛型和工具类"><a href="#4-泛型和工具类" class="headerlink" title="4.泛型和工具类"></a>4.泛型和工具类</h2><h3 id="4-1-泛型概述"><a href="#4-1-泛型概述" class="headerlink" title="4.1 泛型概述"></a>4.1 泛型概述</h3><ul>
+<li>Java泛型是JDK1.5中引入的一个新特性，其本质是参数化类型，把类型作为参数传递。</li>
+<li>常见形式有泛型<strong>类</strong>、泛型<strong>接口</strong>、泛型<strong>方法</strong></li>
+<li>语法：<ul>
+<li>&lt;T,…&gt;  T称为类型占位符，表示一种<strong>引用类型</strong>。</li>
+<li>T: Type类型；E：Element元素；K：Key键值；V：Value</li>
+</ul>
+</li>
+<li>好处：<ul>
+<li>(1)提高代码的重用性<ul>
+<li>如泛型方法，方法的参数可以传递任何属性的值，以前实现的话需要用多态</li>
+</ul>
+</li>
+<li>(2)防止类型转换异常,提高代码的安全性<ul>
+<li>在泛型集合里面讲到</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-泛型的常用三种形式"><a href="#4-2-泛型的常用三种形式" class="headerlink" title="4.2 泛型的常用三种形式"></a>4.2 泛型的常用三种形式</h3><h4 id="4-2-1-泛型类"><a href="#4-2-1-泛型类" class="headerlink" title="4.2.1 泛型类"></a>4.2.1 泛型类</h4><ol>
+<li><p>概念：</p>
+<ul>
+<li> 类语法：类名&lt;T&gt;</li>
+<li>T是类型占位符,表示一种引用类型,如果编写多个使用逗号隔开</li>
+<li>泛型类不能实例化；出错原因:此处由于不知道T的类型,有可能这个类型的构造方法是私有(private)的,无法构造</li>
+<li>泛型作为方法的参数</li>
+<li>泛型作为方法的返回值</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>使用泛型创建对象：</p>
+<ul>
+<li>注意：<ul>
+<li>1.泛型只能使用<strong>引用类型</strong>  </li>
+<li>  2.不同泛型类型对象之间不能相互赋值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-2-2-泛型接口"><a href="#4-2-2-泛型接口" class="headerlink" title="4.2.2 泛型接口"></a>4.2.2 泛型接口</h4><ol>
+<li><p>概念：</p>
+<ul>
+<li>语法：接口名&lt;T&gt;</li>
+<li> 注意：不能使用泛型来创建静态常量。Interface中的属性都是 Public Static final的。//T t; </li>
+</ul>
+</li>
+<li><p>泛型接口实现类</p>
+<ol>
+<li><p>一种实现接口，在接口名字后面直接加上确定的类型<br><code>public class GenericInterfaceImpl implements GenericInterface&lt;String&gt;</code></p>
+</li>
+<li><p>另外一种实现接口，在类名后面加上<t>使得类成为泛型类，后面泛型接口的类型与泛型类的类型相同，这样使用更加普适。<br><code>public class GenericInterfaceImpl2&lt;T&gt; implements GenericInterface&lt;T&gt;</code></t></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="4-2-3-泛型方法"><a href="#4-2-3-泛型方法" class="headerlink" title="4.2.3 泛型方法"></a>4.2.3 泛型方法</h4><ol>
+<li><p>概念</p>
+<ul>
+<li>语法：&lt;T&gt; 返回值类型</li>
+<li>示例： <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//泛型方法 </span>
+<span class="token keyword">public</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">T</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token class-name">T</span> t<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//注意：此T只能用在此方法范围内,超出范围不能使用    </span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"这是泛型方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+<span class="token keyword">return</span> t<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p> 泛型方法的使用</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">GenericMethod genericMethod = new GenericMethod();//此处的类是普通类，泛型类型由泛型方法的参数决定
+genericMethod.show("中国加油");
+genericMethod.show(200);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ol>
+<h3 id="4-3-泛型集合"><a href="#4-3-泛型集合" class="headerlink" title="4.3 泛型集合"></a>4.3 泛型集合</h3><ul>
+<li>概念：参数化类型、类型安全的集合，强制集合元素的类型必须一致。</li>
+<li>特点：<ul>
+<li>编译时即可检查，而非运行时抛出异常。</li>
+<li>访问时，不必类型转换（拆箱）。</li>
+<li>不同泛型之间引用不能相互赋值，泛型不存在多态。</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-Set接口与实现类"><a href="#5-Set接口与实现类" class="headerlink" title="5.Set接口与实现类"></a>5.Set接口与实现类</h2><h3 id="5-1-Set子接口"><a href="#5-1-Set子接口" class="headerlink" title="5.1 Set子接口"></a>5.1 Set子接口</h3><h4 id="5-1-1-Set基本概述"><a href="#5-1-1-Set基本概述" class="headerlink" title="5.1.1 Set基本概述"></a>5.1.1 Set基本概述</h4><ul>
+<li>特点：无序、无下标、元素不可重复</li>
+</ul>
+<ul>
+<li>方法：全部继承自 Collection中的方法。</li>
+</ul>
+<h4 id="5-1-2-Set接口使用"><a href="#5-1-2-Set接口使用" class="headerlink" title="5.1.2 Set接口使用"></a>5.1.2 Set接口使用</h4><ol>
+<li><p>添加数据</p>
+<ul>
+<li>  添加的数据<strong>无序</strong></li>
+<li>  添加的数据<strong>不重复</strong></li>
+</ul>
+</li>
+<li><p>删除数据</p>
+</li>
+<li><p>遍历【重点】</p>
+<ol>
+<li>增强for</li>
+<li>迭代器</li>
+</ol>
+</li>
+<li><p>判断</p>
+<ol>
+<li>为空</li>
+<li>包含</li>
+</ol>
+</li>
+</ol>
+<h3 id="5-2-Set实现类"><a href="#5-2-Set实现类" class="headerlink" title="5.2 Set实现类"></a>5.2 Set实现类</h3><h4 id="5-2-1-两种实现类"><a href="#5-2-1-两种实现类" class="headerlink" title="5.2.1 两种实现类"></a>5.2.1 两种实现类</h4><ol>
+<li><p>HashSet【<strong>重点</strong>】</p>
+<ul>
+<li>基于 HashCode实现元素不重复。</li>
+<li>当存入元素的哈希码相同时，会调用 equals进行确认，如结果为true，则拒绝后者存入。</li>
+</ul>
+</li>
+<li><p>TreeSet：(使用二叉树实现)</p>
+<ul>
+<li>基于排列顺序实现元素不重复</li>
+<li>实现了 Sortedset接口，对集合元素自动排序。</li>
+<li>元素对象的类型必须实现 Comparable接口，指定排序规则。</li>
+<li>通过 CompareTo方法确定是否为重复元素。</li>
+</ul>
+</li>
+</ol>
+<h4 id="5-2-2-HashSet的使用1"><a href="#5-2-2-HashSet的使用1" class="headerlink" title="5.2.2 HashSet的使用1"></a>5.2.2 HashSet的使用1</h4><ul>
+<li>同Set的使用</li>
+<li>存储结构：哈希表（数组+链表+{红黑树【JDK1.8之后】}）</li>
+</ul>
+<h4 id="5-2-3-HashSet的使用2"><a href="#5-2-3-HashSet的使用2" class="headerlink" title="5.2.3 HashSet的使用2"></a>5.2.3 HashSet的使用2</h4><ul>
+<li><p>存储过程：</p>
+<ul>
+<li>(1) 根据 hashcode计算保存的位置，如果此位置为空，则直接保存，如果不为空执行第二步</li>
+<li>(2) 再执行equals方法，如果equals方法为true，则认为是重复，否则，形成链表。</li>
+<li>(3) 总结：<ul>
+<li> 先判断hashcode，如果相等(也就是位置相等)，那么判断equals相不相等(内容等不等)。</li>
+<li> 此处需要重写<strong>hashcode</strong>()和<strong>equals</strong>()两个方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>补充：hashcode()编码</p>
+<ul>
+<li><p>编码中有prime = 31;<br>  （1）作用在31是一个质数，减少是散列冲突。</p>
+<p>  （2）提高执行效率 。 31 * i = (i&lt;&lt;5) - i;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-4-TreeSet使用"><a href="#5-2-4-TreeSet使用" class="headerlink" title="5.2.4 TreeSet使用"></a>5.2.4 TreeSet使用</h4><ol>
+<li>基本操作：<ol>
+<li>添加</li>
+<li>删除</li>
+<li>遍历<ol>
+<li>增强for</li>
+<li>迭代器</li>
+</ol>
+</li>
+<li>判断</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>注意点：</p>
+<ul>
+<li><p>存储结构：红黑树</p>
+</li>
+<li><p> 要求：元素必须要实现 Compartle接口，compareTo()方法返回值为0，认为是重复元素</p>
+</li>
+<li><p><strong>方法一</strong>：compareTo()示例（实现接口的比较）：</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">  public int compareTo(Person o) {&nbsp;&nbsp;&nbsp;
+      int n1 =this.getName().compareTo(o.getName());&nbsp;&nbsp;&nbsp;
+      int n2 = this.age - o.getAge();&nbsp;&nbsp;&nbsp;
+      return n1 == 0 ? n2 : n1;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="5-2-5-TreeSet使用2"><a href="#5-2-5-TreeSet使用2" class="headerlink" title="5.2.5 TreeSet使用2"></a>5.2.5 TreeSet使用2</h4><ul>
+<li><p><strong>方法二</strong>：Comparator（定制比较）</p>
+<ul>
+<li>Comparator：实现定制比较（比较器）</li>
+<li>Comparable：可比较的</li>
+</ul>
+</li>
+<li><p>示例代码：</p>
+  <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">      TreeSet&lt;Person&gt; people = new TreeSet&lt;&gt;(new Comparator&lt;Person&gt;() {&nbsp;&nbsp;&nbsp; 
+      @Override&nbsp;&nbsp;&nbsp; //先按年龄比，再按姓名比&nbsp;&nbsp;&nbsp;
+      public int compare(Person o1, Person o2）
+      {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          int n1 = o1.getAge() - o2.getAge();
+          int n2 =o1.getName().compareTo(o2.getName());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          return n1 == 0? n2:n1;&nbsp;&nbsp;&nbsp; 
+      }
+});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ul>
+<h2 id="6-Map接口与实现类"><a href="#6-Map接口与实现类" class="headerlink" title="6.Map接口与实现类"></a>6.Map接口与实现类</h2><h3 id="6-1-Map集合概述"><a href="#6-1-Map集合概述" class="headerlink" title="6.1 Map集合概述"></a>6.1 Map集合概述</h3><p><img src="/2021/03/04/java-ji-he-kuang-jia/2Map%E9%9B%86%E5%90%88%E6%A6%82%E8%BF%B0.jpg" alt="2Map集合概述"></p>
+<ul>
+<li>Map接口的特点：<ol>
+<li>用于存储任意键值对（Key- Value）</li>
+<li>键：无序、无下标、不允许重复（唯一）</li>
+<li>值：无序、无下标、允许重复</li>
+</ol>
+</li>
+</ul>
+<h3 id="6-2-Map父接口"><a href="#6-2-Map父接口" class="headerlink" title="6.2 Map父接口"></a>6.2 Map父接口</h3><ul>
+<li><p>特点：存储一对数据（Key- Value），无序、无下标，键不可重复，值可重复。</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li> V put(Kkey, v value)//将对象存入到集合中,关联键值.key重复则覆盖原值.</li>
+<li>Object get( Object key)//根据键获取对应的值.</li>
+<li>Set<k>//返回所有key </k></li>
+<li>Collection<v> values0//返回包含所有值的 Collection集合. </v></li>
+<li>Set&lt;Map. Entry&lt;K,V&gt;//键值匹配的Set集合.</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-Map接口使用"><a href="#6-3-Map接口使用" class="headerlink" title="6.3 Map接口使用"></a>6.3 Map接口使用</h3><ol>
+<li><p>特点:(1)存储键值对(2)键不能重复,值可以重复(3)无序</p>
+</li>
+<li><p>基本操作：</p>
+<ol>
+<li><p>添加元素</p>
+<ul>
+<li>当添加相同的key,而value不同时，会覆盖原先相同的key的value</li>
+</ul>
+</li>
+<li><p>删除元素</p>
+</li>
+<li><p>遍历<br>  3.1使用keySet();返回的是所有key的Set集合</p>
+ <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Set&lt;String&gt; keyset = map.keySet();
+for (String s : keyset) {&nbsp;&nbsp;&nbsp; 
+		System.out.println(s + "----" + map.get(s));
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p> 3.2使用entrySet(); 返回的是et&lt;Map.Entry&lt;String,String&gt;&gt;,Entry&lt;String,String&gt;表示Map的键值对</p>
+ <pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Set&lt;Map.Entry&lt;String, String&gt;&gt; entries = map.entrySet();
+for (Map.Entry&lt;String, String&gt; entry : entries) {&nbsp;&nbsp;&nbsp; 
+		System.out.println(entry.getKey() + "--" + entry.getValue());
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>判断</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="6-4-Map集合的实现类"><a href="#6-4-Map集合的实现类" class="headerlink" title="6.4 Map集合的实现类"></a>6.4 Map集合的实现类</h3><h4 id="6-4-1-四种"><a href="#6-4-1-四种" class="headerlink" title="6.4.1 四种"></a>6.4.1 四种</h4><ol>
+<li><p>HashMap【重点】:</p>
+<ul>
+<li>JDK1.2版本,线程不安全,运行效率快;允许用null作为key或是 value</li>
+</ul>
+</li>
+<li><p>Hashtable [使用较少]:</p>
+<ul>
+<li>JDK1.0版本,线程安全,运行效率慢;不允许null作为key或是 value.</li>
+</ul>
+</li>
+<li><p>Properties[使用<strong>较多</strong>]:</p>
+<ul>
+<li>Hashtable的<strong>子类</strong>,要求key和 value都是 String.通常用于配置文件的读取.</li>
+</ul>
+</li>
+<li><p>TreeMap:</p>
+<ul>
+<li>实现了 SortedMap接口(是Map的子接口),可以对key自动排序.</li>
+</ul>
+</li>
+</ol>
+<h4 id="6-4-2-HashMap集合的使用"><a href="#6-4-2-HashMap集合的使用" class="headerlink" title="6.4.2 HashMap集合的使用"></a>6.4.2 HashMap集合的使用</h4><ul>
+<li>基本概念：<ul>
+<li>存储结构:哈希表(数组+链表+红黑树)</li>
+<li>去重：使用key的hashcode和equals作为重复</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>基本操作：与Map相同</li>
+</ul>
+<h4 id="6-4-3-HashMap源码分析"><a href="#6-4-3-HashMap源码分析" class="headerlink" title="6.4.3 HashMap源码分析"></a>6.4.3 HashMap源码分析</h4><ol>
+<li>static final int DEFAULT INITIAL_ CAPACITY=1&lt;&lt;4;// hashMap初始容量大小</li>
+<li>static fina1 int MAXIMUM CAPACITY=1&lt;&lt;39;// hashmark的数组最大容量</li>
+<li>static fina1f1 oat dEfAULT loaD_ FACTOR=9.75f;//默认加载因子</li>
+<li>static fina1 int TREEIFY THRESHOLD=8;//jdk1.8当链表长度大于8时,调整成红黑数</li>
+<li>static final int UNTREEIFY THRESHOLD=6;//jdk1.8当链表长度小于6时,调整成链表</li>
+<li>static fina1 int MIN TREEIFY CAPACITY=64://jdk1.8当链表长度大于8时,并且集合元素个数大于等于64时,调整成红黑数</li>
+<li>transient node&lt;K,V&gt;[]tab1e;//哈希表中的数组</li>
+<li>size;//元素个数</li>
+</ol>
+<ul>
+<li><code>我的笔记</code>：<ul>
+<li>当数组&gt;64，且有一个位置上的节点链表长度大于8时，那么HashMap此时转换为红黑树</li>
+<li>当数组元素个数＜6时，此时红黑树转换为数组</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>构造方法：</p>
+<ul>
+<li><p>只有一句复制加载因子。</p>
+<p>​    <code>public HashMap() {&nbsp;&nbsp;this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted}</code></p>
+</li>
+<li><p>刚创建hashmap之后没有添加元素 table= null size=8  目的节省空间</p>
+</li>
+<li><p>当添加一个元素之后，数组空间变为16，当元素个数大于12（0.75的负载因子）时，扩容为原来2倍空间</p>
+</li>
+</ul>
+</li>
+<li><p>put方法：</p>
+<p>  ​           <code>public V put(K key, V value) {&nbsp;&nbsp;return putVal(hash(key), key, value, false, true);}</code></p>
+</li>
+<li><p>总结：</p>
+<ol>
+<li>HashMap刚创建时,table是null,为了节省空间,当添加第一个元素是,tab1e容量调整为16</li>
+<li>当元素个数大于阈值(16*.75=12)时,会进行扩容,扩容后大小为原来的2倍.日的是减少调整元素的个数.</li>
+<li>jdk1.8当每个链表长度大于8,并且数组元素个数大于等于64时,会调整为红黑树,目的提高执行效率</li>
+<li>jdk1.8当链表长度小于6时,调整成链表</li>
+<li>jdk1.8以前,链表时头插入,jdk1.8以后时是尾插入</li>
+</ol>
+</li>
+<li><p><strong>HashSet源码分析</strong>：内部其实用的就是HashMap</p>
+</li>
+</ul>
+<h4 id="6-4-4-TreeMap的使用"><a href="#6-4-4-TreeMap的使用" class="headerlink" title="6.4.4 TreeMap的使用"></a>6.4.4 TreeMap的使用</h4><ul>
+<li>基本操作，同HashMap</li>
+<li>源码分析：<strong>TreeSet内部</strong>使用的是<strong>TreeMap</strong></li>
+</ul>
+<h2 id="7-Collections工具类"><a href="#7-Collections工具类" class="headerlink" title="7. Collections工具类"></a>7. Collections工具类</h2><h3 id="7-1概述"><a href="#7-1概述" class="headerlink" title="7.1概述"></a>7.1概述</h3><ul>
+<li><p> 概念：集合工具类，定义了除了<strong>存取以外</strong>的集合常用方法 （类似的有<strong>Arrays工具类</strong>，对数组进行操作）</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li>public static void reverse(List&lt;?&gt;list)//反转集合中元素的顺序</li>
+<li>public static void shuffle(List&lt;?&gt;list)//随机重置集合元素的顺序</li>
+<li>public static void sort(List<t>list)//升序排序(元素类型必须实现Comparable接口)</t></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-2-Collections工具类的使用"><a href="#7-2-Collections工具类的使用" class="headerlink" title="7.2 Collections工具类的使用"></a>7.2 Collections工具类的使用</h3><ol>
+<li><p>sort()排序： <code>Collections.sort(list);</code></p>
+</li>
+<li><p>binarySearch二分查找：<code>Collections.binarySearch(list,13)</code></p>
+</li>
+<li><p>copy()复制：</p>
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">copy</span><span class="token punctuation">(</span>dest<span class="token punctuation">,</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将list转为dest</span>
+<span class="token comment">//出错：Source does not fit in dest；需要适合dest的空间</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>reverse()反转 <code>Collections.reverse(list);</code></p>
+</li>
+<li><p>shuffle()打乱 <code>Collections.shuffle(list);</code></p>
+</li>
+<li><p>补充：</p>
+<p>6.1 list转数组</p>
+<p>​    <code>Integer[] arr = (Integer[]) list.toArray(new Integer[0]);//我这个地方还需要强转一下</code></p>
+<p>6.2  数组转成集合</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">List\&lt;String&gt; list1 = Arrays.asList(str);
+//此集合是受限集合，不可以删除和添加元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>6.3 基本类型数组转集合</p>
+<p>​    <code>//把基本类型数组转为集合，需要修改为包装类型</code></p>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">王建</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/wangjian8774/2021/03/04/java-ji-he-kuang-jia/">https://github.com/wangjian8774/2021/03/04/java-ji-he-kuang-jia/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">王建</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
+                                    <span class="chip bg-color">Java集合框架</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的激励是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'cfb9914b84b10546d5a2',
+        clientSecret: 'd88a50079f2f74123549bd23eda8fe71e366b7ba',
+        repo: 'wangjian8774.github.io',
+        owner: 'wangjian8774',
+        admin: "wangjian8774",
+        id: '2021-03-04T18-54-55',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/06/19/java-duo-xian-cheng-xue-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java多线程学习">
+                        
+                        <span class="card-title">Java多线程学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    Java学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">多线程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/14/ubuntu-server2004-pei-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="ubuntu_server2004配置">
+                        
+                        <span class="card-title">ubuntu_server2004配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ubuntu/" class="post-category">
+                                    ubuntu
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ubuntu%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">ubuntu系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: WangJian&#39;s Blog<br />'
+            + '文章作者: WangJian<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者wangjian所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="486545247"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.5'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">WangJian</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">10.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "1";
+                    var startDate = "09";
+                    var startHour = "21";
+                    var startMinute = "44";
+                    var startSecond = "44";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wangjian8774" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2861141635@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2861141635" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2861141635" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
